@@ -1,7 +1,7 @@
 function ln() { document.write("<br />"); }
 
 function write(s) {
-	if (typeof s == "undefined")
+	if (s == undefined)
 		document.write(s);
 	else
 		document.write( s.toString().replace(/\n/g, "<br />") );
