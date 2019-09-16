@@ -23,10 +23,31 @@ string.prototype.assign = function(s) {
 			this.arr.push( s.charAt(i) );
 	}
 };
+string.prototype.front = function() { return this.arr[0]; };
+string.prototype.back = function() { return this.arr[this.arr.length-1]; };
+string.prototype.empty = function() { return this.arr.length == 0; };
+string.prototype.clear = function() { this.arr.length = 0; };
+string.prototype.reverse = function() { this.arr.reverse(); };
+string.prototype.insert = function(index, c) { this.arr.splice(index, 0, c); };
+string.prototype.erase = function(index) { this.arr.splice(index, 1); };
+string.prototype.push_back = function(c) { this.arr.push(c); };
+string.prototype.pop_back = function() { this.arr.pop(); };
+string.prototype.append = function(s) {
+	var i;
+	if ( s instanceof string )
+		for (i=0; i<s.size(); ++i)
+			this.push_back( s.at(i) );
+	else
+		for (i=0; i<s.length; ++i)
+			this.push_back( s.charAt(i) );
+};
+
 
 var i, s = new string("hello");
 for (i=0; i<s.size(); ++i)
-	writeln(s.at(i));
+	write(s.at(i));
+ln();
+
 
 ln();
 writeln("--------------- All OK ---------------");
