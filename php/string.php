@@ -16,7 +16,7 @@ class kstring implements \Iterator{
 		$this->rewind();
 	}
 
-	function __clone() { $this->arr = $this->arr; }
+	function __clone() { $this->arr = $this->arr; $this->rewind(); }
 	function __toString() { return join('', $this->arr); }
 
 	function assign($s) { $this->arr = str_split($s); }
@@ -46,16 +46,21 @@ class kstring implements \Iterator{
 	}
 	function substr($index, $count) {
 		$s = new kstring();
-		$s->arr = array_splice($this->arr, $index, $count, false);
+		$s->arr = array_splice($this->arr, $index, $count);
 		return $s;
 	}
 	function swap($s) {
-		$this->arr = $s->arr;
+		$a = &$this->arr;
+		$this->arr = &$s->arr;
+		$s->arr = &$a;
+		$this->rewind();
+		$s->rewind();
+	}
+	function findc($c) {
+		$index = array_search($c, $this->arr);
+		return $index!==false ? $index : -1;
 	}
 }
-
-$x = new kstring("HELLO");
-writeln($x);
 
 }
 
