@@ -53,16 +53,31 @@ class kstring implements \Iterator{
 		$this->size -= $count;
 		return $s;
 	}
+
 	function swap(kstring $s) {
 		$a = &$this->arr;
 		$this->arr = &$s->arr;
 		$s->arr = &$a;
+
+		$sz = $this->size;
+		$this->size = $s->size;
+		$s->size = $sz;
+
 		$this->rewind();
 		$s->rewind();
 	}
 	function findc($c) {
-		$index = array_search($c, $this->arr);
-		return $index!==false ? $index : -1;
+		$pos = func_num_args()>1 ? func_get_arg(1) : 0;
+		$size = $this->size();
+		for ($i=$pos; $i<$size; ++$i)
+			if ($this->at($i) == $c)
+				return $i;
+		return -1;
+	}
+
+	function dump() {
+		var_dump($this->arr);
+		var_dump($this->size);
 	}
 }
 
