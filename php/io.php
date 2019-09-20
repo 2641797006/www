@@ -5,16 +5,19 @@ namespace _24k{
 
 // use "\n" instead of PHP_EOL
 
-/*
-// print to HTML
-function ln() { echo '<br />'; }
-function write($s) { echo str_replace("\n", '<br />', $s); }
-*/
 
-// print to terminal
+// write to HTML
+function ln() { echo '<br />'; }
+function write($s) {
+	static $find = array(" ", "\n");
+	static $replace = array('&nbsp;', '<br />');
+	echo str_replace($find, $replace, $s);
+}
+/*
+// write to terminal
 function ln() { echo "\n"; }
 function write($s) { echo $s; }
-
+*/
 
 function writeln($s) { write($s); ln(); }
 
