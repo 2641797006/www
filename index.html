@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <title>WebView</title>
+    <link rel="icon" type="image/x-icon"  href="img/favicon.ico"/>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #f0f0f2;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
 
-<head>
-  <title>WebView</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon"  href="img/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="css/font.css">
-  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/example.css">
-</script>
+      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
 
-</head>
+      a { color: #4183c4; text-decoration: none; }
+      a:hover { text-decoration: underline; }
 
-<body style="background-color: #f0f0f2;">
-<div class="container">
-<div class="container-fluid">
+      .logo { display: inline-block; margin-top: 35px; }
+      .logo-img-2x { display: none; }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .logo-img-1x { display: none; }
+        .logo-img-2x { display: inline-block; }
+      }
 
-<div class="example_div">
-  <form action="https://www.baidu.com/s">
-<!--  <form action="php/main.php" method="post">-->
+      #example_div{
+        width: 600px;
+        margin: 5em auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 1em;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+
+    <a href="/" class="logo logo-img-1x">
+    <img width="72" height="72" title="" alt="" src="img/favicon.ico">
+    </a>
+    <a href="/" class="logo logo-img-2x">
+    <img width="72" height="72" title="" alt="" src="img/favicon.ico">
+    </a>
+
+<div class="container-fluid" id="example_div">
+  <form action="php/do.php" method="post">
   <div class="row">
     <div class="col-xs-10">
-      <input class="cnew form-control" type="text" placeholder="Enter whatever you want" name="word" required>
+      <input class="form-control" type="text" placeholder="Enter whatever you want" name="what" required>
     </div>
     <div class="col-xs-2">
-      <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> 起飞</button>
+      <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> 提交</button>
     </div>
   </div>
   </form>
-
-</div>
-</div>
 </div>
 
-</body>
 
+    </div>
+  </body>
 </html>
