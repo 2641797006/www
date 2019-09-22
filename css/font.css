@@ -1,17 +1,17 @@
 
 @font-face {
 	font-family: _courier;
-	src: url(../font/_courier.ttf);
+	src: url(https://raw.githubusercontent.com/2641797006/www/master/font/_courier.ttf);
 }
 
 @font-face {
 	font-family: _courier_new;
-	src: url(../font/_courier_new.ttf);
+	src: url(https://raw.githubusercontent.com/2641797006/www/master/font/_courier_new.ttf);
 }
 
 @font-face {
 	font-family: _monospace;
-	src: url(../font/_monospace.ttf);
+	src: url(https://raw.githubusercontent.com/2641797006/www/master/font/_monospace.ttf);
 }
 
 .cnew{
