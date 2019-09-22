@@ -1,0 +1,26 @@
+
+@font-face {
+	font-family: _courier;
+	src: url(../font/_courier.ttf);
+}
+
+@font-face {
+	font-family: _courier_new;
+	src: url(../font/_courier_new.ttf);
+}
+
+@font-face {
+	font-family: _monospace;
+	src: url(../font/_monospace.ttf);
+}
+
+@font-face {
+	font-family: _ukai;
+	src: url(../font/_ukai.ttc);
+}
+
+.cnew{
+  font-family: "_courier_new";
+}
+
+
