@@ -14,11 +14,6 @@
 	src: url(../font/_monospace.ttf);
 }
 
-@font-face {
-	font-family: _ukai;
-	src: url(../font/_ukai.ttc);
-}
-
 .cnew{
   font-family: "_courier_new";
 }
