@@ -2,28 +2,40 @@
 <html lang="zh-cn">
 
 <head>
+  <title>WebView</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon"  href="img/favicon.ico"/>
-  <title>WebView</title>
-  <style>
-    *{
-      margin:0;
-      padding:0;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/example.css">
+</script>
+
 </head>
 
-<!--<body style="font-family: Courier New, Courier, typewriter, matrix, monospace;">-->
-<body style="font-family: monospace">
+<body style="background-color: #f0f0f2;">
+<div class="container-fluid">
 
-<script>
-  !function(){
-  }();
-</script>
-<script src="./js/io.js"></script>
-<script src="./js/string.js"></script>
-<script src="./js/tmp.js"></script>
+<div class="example_div">
+  <form action="php/main.php" method="post">
+  <div class="row">
+    <div class="col-xs-10">
+      <input class="cnew form-control" type="text" placeholder="Enter what you want" name="what" required>
+    </div>
+    <div class="col-xs-2">
+      <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> 起飞</button>
+    </div>
+  </div>
+  </form>
+
+</div>
+
+</div>
+
+<script src="js/io.js"></script>
+<script src="js/string.js"></script>
+<script src="js/tmp.js"></script>
 
 </body>
 
