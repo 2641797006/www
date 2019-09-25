@@ -8,6 +8,11 @@
     <link rel="icon" type="image/x-icon"  href="../img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="../css/font.css">
     <link rel="stylesheet" type="text/css" href="../css/example.css">
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    </style>
 </head>
 
 <body>

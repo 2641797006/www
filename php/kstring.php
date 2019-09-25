@@ -1,6 +1,7 @@
 <?php
 
 namespace _24k {
+// TODO: use _24k\kstring;
 
 class kstring implements \Iterator{
 	private $arr;
@@ -37,7 +38,13 @@ class kstring implements \Iterator{
 	function reverse() { $this->arr = array_reverse($this->arr); $this->rewind(); }
 
 	function clear() { $this->arr = array(); $this->size = 0; $this->rewind(); }
-	function insert($index, $s) { array_splice($this->arr, $index, 0, str_split($s)); $this->size += strlen($s); }
+	function insert($index, $s) {
+		$size = strlen($s);
+		if ( ! $size )
+			$size = 1;
+		array_splice($this->arr, $index, 0, str_split($s));
+		$this->size += $size;
+	}
 	function erase($index, $count) { array_splice($this->arr, $index, $count); $this->size -= $count; }
 	function push_back($c) { array_push($this->arr, $c); ++$this->size; }
 	function pop_back() { array_pop($this->arr); --$this->size; }
@@ -73,6 +80,19 @@ class kstring implements \Iterator{
 			if ($this->at($i) == $c)
 				return $i;
 		return -1;
+	}
+
+	function set($index, $c) { $this->arr[index] = $c; }
+
+	function null2s() {
+		if ( ! func_num_args() )
+			$s = 'NULL';
+		else
+			$s = func_get_arg(0);
+		$size = $this->size();
+		for ($i=0; $i<$size; ++$i)
+			if ($this->arr[$i] == "")
+				$this->arr[$i] = $s;
 	}
 
 	function dump() {

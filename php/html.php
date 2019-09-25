@@ -2,6 +2,7 @@
 
 namespace _24k {
 require_once "file.php";
+// TODO: // use _24k\html;
 
 class html {
 	private static $begin = ".begin", $end = ".end", $path = "file/";

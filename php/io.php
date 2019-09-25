@@ -5,20 +5,20 @@ namespace _24k{
 // use "\n" instead of PHP_EOL
 
 function io_bs($s) {
-	static $find = array(' ', "\n");
-	static $replace = array('&nbsp;', '<br />');
+	static $find = array(' ', '"', '&', '<', '>', "\n");
+	static $replace = array('&nbsp;', '&quot;', '&amp;', '&lt;', '&gt;', '<br/>');
 	return str_replace($find, $replace, $s);
 }
 
-/*
+if ( isset($IO_HTML) && $IO_HTML ) {
 // write to HTML
 function ln() { echo '<br />'; }
 function write($s) { echo io_bs($s); }
-*/
+} else {
 // write to terminal
 function ln() { echo "\n"; }
 function write($s) { echo $s; }
-
+}
 
 function writeln($s) { write($s); ln(); }
 
