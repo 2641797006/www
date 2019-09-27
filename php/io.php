@@ -1,12 +1,12 @@
 <?php
 
 namespace _24k{
-//TODO: use function _24k\{io_bs, ln, write, writeln, warr, warrln};
+//TODO: use function _24k\{io_bs, ln, write, writeln, warr, warrln, wout, woutln, werr, werrln};
 // use "\n" instead of PHP_EOL
 
 function io_bs($s) {
-	static $find = array(' ', '"', '&', '<', '>', "\n");
-	static $replace = array('&nbsp;', '&quot;', '&amp;', '&lt;', '&gt;', '<br/>');
+	static $find = array('&', ' ', '"', '<', '>', "\n");
+	static $replace = array('&amp;', '&nbsp;', '&quot;', '&lt;', '&gt;', '<br/>');
 	return str_replace($find, $replace, $s);
 }
 
@@ -31,6 +31,11 @@ function warrln($arr) {
 	$se = func_num_args()>1 ? func_get_arg(1) : ',';
 	writeln( join($se, $arr) );
 }
+
+function wout($s) { fwrite(STDOUT, $s); }
+function woutln($s) { fwrite(STDOUT, $s); fwrite(STDOUT, "\n"); }
+function werr($s) { fwrite(STDERR, $s); }
+function werrln($s) { fwrite(STDERR, $s); fwrite(STDERR, "\n"); }
 
 }
 
