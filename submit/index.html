@@ -1,0 +1,66 @@
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>Submit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon"  href="img/favicon.ico"/>
+  <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	load();
+});
+</script>
+<style>
+h1{
+  color: #337AB7;
+}
+</style>
+</head>
+<body>
+
+<div class="div_example">
+  <h1 class="text-center">submit</h1>
+  <p class="text-center"><a href="#">made by me</a></p>
+  <input type="radio" name ="method" value="post" checked>post&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name ="method" value="get">get<br/><br/>
+  <form class="bs-example bs-example-form" id="do_form" role="form" method="post">
+<div id="add">
+
+    <div class="input-group">
+      <span class="input-group-btn">
+        <div class="btn btn-default prompt">action</div>
+      </span>
+      <input type="text" class="form-control" id="form_action" value="http://">
+    </div>
+    <br/>
+
+  <div id="pair0">
+    <div class="input-group">
+      <span class="input-group-btn">
+	<div class="btn btn-default prompt">name</div>
+      </span>
+      <input type="text" class="form-control">
+    </div>
+    <div class="input-group">
+      <span class="input-group-btn">
+	<div class="btn btn-default prompt">value</div>
+      </span>
+      <input type="text" class="form-control" name="">
+    </div>
+  </div>
+    <br/>
+
+</div>
+  <button type="submit" class="btn btn-success btn-lg btn-block" onclick="return done()">Do</button>
+<br/>
+  <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return addPair()">add</button>
+<br/>
+  <button type="button" class="btn btn-danger btn-lg btn-block" onclick="return delPair()">delete</button>
+  </form>
+</div>  
+
+</body>
+</html>

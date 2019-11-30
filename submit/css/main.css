@@ -1,0 +1,40 @@
+
+body {
+  background-color: #f0f0f2;
+  margin: 0;
+  padding: 0;
+}
+
+.div_example {
+  width: 600px;
+  margin: 5em auto;
+  padding: 1em 3em 2em 3em;
+  background-color: #fdfdff;
+  border-radius: 0.5em;
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 700px) {
+  .example_div {
+    margin: 0 auto;
+    width: auto;
+  }
+}
+
+.my-menu {
+	background-color: #D9F9F9;
+}
+
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
+
+.red { color: #f44336; }
+.blue { color: #2095f3; }
+
+.prompt{ width: 120px; }
+
+.warning {
+  color: red;
+  visibility: hidden;
+}
